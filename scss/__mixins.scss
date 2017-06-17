@@ -1,0 +1,40 @@
+@mixin properback($size){
+	background-repeat: no-repeat;
+	background-size: $size;
+	background-position: 50% 50%;
+}
+
+@mixin gradient{
+	background: #1bb4d0; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #1bb4d0 0%, #09899a 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #1bb4d0 0%,#09899a 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #1bb4d0 0%,#09899a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1bb4d0', endColorstr='#09899a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+// Adaptiveness
+@mixin tablet{
+	@media screen and(min-width:#{$tablet-width}){
+		@content;
+	}
+}
+
+@mixin laptop{
+	@media screen and(min-width:#{$laptop-width+1}){
+		@content;
+	}
+}
+
+@mixin desktop{
+	@media screen and(min-width:#{$desktop-width+1}){
+		@content;
+	}
+}
+
+@mixin huge{
+	@media screen and(min-width:#{$high_res-width+1}){
+		@content;
+	}
+}
+
+
