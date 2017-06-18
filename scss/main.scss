@@ -1,341 +1,348 @@
-
 @import "__mixins";
-@import "__variables"; 
-
+@import "__variables";
 
 // Reset of body space
-body{
-	margin:0;
-	padding:0;
-	font-family:sans-serif;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
 // Now we build up mobile-first
-.c-navigation{
-	width:100%;
-	height:20vw;
-	box-sizing:border-box;
-	background-color: $navigation-background;
-	-webkit-position:sticky;
-	position:sticky;
-	top:0;
-	z-index:100;
-	@include tablet{
-		height:8vw;
-	}
-	@include laptop{
-		height:7vw;
-	}
-	@include desktop{
-		height:6vw;
-	}
-	&__title--mobile{
-		height:100%;
-		color:white;
-		display:flex;
-		align-items:center;
-		justify-content:flex-start;
-		padding-left:29px;
-		font-size: 6.1vw;
-		@include tablet{
-			display:none;
-		}
-	}
-	&__menu-button--mobile{
-		position:absolute;
-		right:0;
-		top:0;
-		width:20vw;
-		height:20vw;
-		background-color: $menu-button;
-		display:flex;
-		justify-content:center;
-		align-items:center;
-		@include tablet{
-			display:none;
-		}
-	}
-	&__menu-line{
-		background-color: white;
-        display: block;
-        height: 3px;
-        position: absolute;
-        width: 28px;
-        transition:transform 1s;
-			&--1{top: 35%;}
-			&--2{top:50%;}
-			&--3{top:65%;}
-			// animation for menu hamburger on click:
-			&--arrow-1{
-				transform:rotate(-45deg);
-				left:17px;
-				top:42%;
-				width:15px;
-				@media screen and(min-width:342px){
-					left:20px;
-				}
-				@media screen and(min-width:346px){
-					left:21px;
-				}
-				@media screen and(min-width:360px){
-					left:22px;
-				}
-				@media screen and(min-width:375px){
-					left:24px;
-				}
-				@media screen and(min-width:382px){
-					left:25px;
-				}
-				@media screen and(min-width:398px){
-					left:26px;
-				}
-				@media screen and(min-width:409px){
-					left:27px;
-				}
-			}
-			&--arrow-2{
-				transform:rotate(180deg);
-			}
-			&--arrow-3{
-				transform:rotate(45deg);
-				left:17px;
-				top:60%;
-				width:15px;
-				@media screen and(min-width:342px){
-					left:20px;
-				}
-				@media screen and(min-width:346px){
-					left:21px;
-				}
-				@media screen and(min-width:360px){
-					left:22px;
-				}
-				@media screen and(min-width:375px){
-					left:24px;
-				}
-				@media screen and(min-width:382px){
-					left:25px;
-					top:59%;
-				}
-				@media screen and(min-width:398px){
-					left:26px;
-				}
-				@media screen and(min-width:409px){
-					left:27px;
-				}
-			}
-		}
+.c-navigation {
+  width: 100%;
+  height: 20vw;
+  box-sizing: border-box;
+  background-color: $navigation-background;
+  -webkit-position: sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  @include tablet {
+    height: 8vw;
+  }
+  @include laptop {
+    height: 7vw;
+  }
+  @include desktop {
+    height: 6vw;
+  }
+  &__title--mobile {
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 29px;
+    font-size: 6.1vw;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__menu-button--mobile {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20vw;
+    height: 20vw;
+    background-color: $menu-button;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__menu-line {
+    background-color: white;
+    display: block;
+    height: 3px;
+    position: absolute;
+    width: 28px;
+    transition: transform 1s;
+    &--1 {
+      top: 35%;
+    }
+    &--2 {
+      top: 50%;
+    }
+    &--3 {
+      top: 65%;
+    }
+    // animation for menu hamburger on click:
+    &--arrow-1 {
+      transform: rotate(-45deg);
+      left: 17px;
+      top: 42%;
+      width: 15px;
+      @media screen and(min-width:342px) {
+        left: 20px;
+      }
+      @media screen and(min-width:346px) {
+        left: 21px;
+      }
+      @media screen and(min-width:360px) {
+        left: 22px;
+      }
+      @media screen and(min-width:375px) {
+        left: 24px;
+      }
+      @media screen and(min-width:382px) {
+        left: 25px;
+      }
+      @media screen and(min-width:398px) {
+        left: 26px;
+      }
+      @media screen and(min-width:409px) {
+        left: 27px;
+      }
+    }
+    &--arrow-2 {
+      transform: rotate(180deg);
+    }
+    &--arrow-3 {
+      transform: rotate(45deg);
+      left: 17px;
+      top: 60%;
+      width: 15px;
+      @media screen and(min-width:342px) {
+        left: 20px;
+      }
+      @media screen and(min-width:346px) {
+        left: 21px;
+      }
+      @media screen and(min-width:360px) {
+        left: 22px;
+      }
+      @media screen and(min-width:375px) {
+        left: 24px;
+      }
+      @media screen and(min-width:382px) {
+        left: 25px;
+        top: 59%;
+      }
+      @media screen and(min-width:398px) {
+        left: 26px;
+      }
+      @media screen and(min-width:409px) {
+        left: 27px;
+      }
+    }
+  }
 
-		&__full-menu{
-				display:none;
-				@include tablet{
-					position:absolute;
-					top:0;
-					display:flex;
-					width:80%;
-					height:100%;
-					background-color: transparent;
-					justify-content:space-around;
-				}
-				@include laptop{
-					width:70%;
-				}
-				@include desktop{
-					width:60%;
-				}
-			}
-			&__menu-item{
-				color:white;
-				cursor:pointer;
-				display:flex;
-				align-items:center;
-				justify-content:center;
-				width:24%;
-				height:100%;
-				text-transform: uppercase;
-				font-size: 1.4vw;
-				@include laptop{
-					font-size: 1.3vw;
-				}
-				@include desktop{
-					font-size: 1.1vw;
-				}
-			}
+  &__full-menu {
+    display: none;
+    @include tablet {
+      position: absolute;
+      top: 0;
+      display: flex;
+      width: 80%;
+      height: 100%;
+      background-color: transparent;
+      justify-content: space-around;
+    }
+    @include laptop {
+      width: 70%;
+    }
+    @include desktop {
+      width: 60%;
+    }
+  }
+  &__menu-item {
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24%;
+    height: 100%;
+    text-transform: uppercase;
+    font-size: 1.4vw;
+    &:hover {
+      transform: scale(1.2, 1.2);
+    }
+    @include laptop {
+      font-size: 1.3vw;
+    }
+    @include desktop {
+      font-size: 1.1vw;
+    }
 
-	&__menu--hidden{
-		position:relative;
-		z-index:30;
-		width:100%;
-		background-color: white;
-		box-shadow: 0 0 4px 0 rgba(80,80,80,0.5);
-		transform:translateY(-500px);
-		transition:all 1s;
-	}
-	&__menu--shown{
-		position:relative;
-		transform:translateY(0);
-		@include tablet{
-			display:none;
-		}
-	}
-	&__menu-item--mobile{
-		width:100%;
-		display:flex;
-		justify-content:center;
-		padding:20px 0;
-		box-shadow: 0 0 2px 1px rgba(90,90,90,0.1);
-		font-size: 18px;
-		font-weight: bold;
-		text-transform: uppercase;
-	}
+    &--active {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &__menu--hidden {
+    position: relative;
+    z-index: 30;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 4px 0 rgba(80, 80, 80, 0.5);
+    transform: translateY(-500px);
+    transition: all 1s;
+  }
+  &__menu--shown {
+    position: relative;
+    transform: translateY(0);
+    @include tablet {
+      display: none;
+    }
+  }
+  &__menu-item--mobile {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    box-shadow: 0 0 2px 1px rgba(90, 90, 90, 0.1);
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
 }
 
-.c-introduction{
-	width:100%;
-	height:55vw;
-	padding-left:35px;
-	display:flex;
-	flex-wrap:wrap;
-	align-items:flex-start;
-	align-content:center;
-	cursor:pointer;
-	box-sizing:border-box;
-	@include gradient;
-		&__title{
-		color:white;
-		font-size: 6.1vw;
-		width:100%;
-		margin-bottom: 18px;
-		}
-		&__link{
-		color:rgba(255,255,255,0.6);
-		width:100%;
-		font-size: 4.1vw;
-	}
+.c-introduction {
+  width: 100%;
+  height: 55vw;
+  padding-left: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  @include gradient;
+  &__title {
+    color: white;
+    font-size: 6.1vw;
+    width: 100%;
+    margin-bottom: 18px;
+  }
+  &__link {
+    color: rgba(255, 255, 255, 0.6);
+    width: 100%;
+    font-size: 4.1vw;
+  }
 }
 
-.c-details{
-	width:100%;
-	height: 25vw;
-	position:relative;
-	display:flex;
-	background-color: #27212b;
-	box-shadow:0 1px 2px 0 rgba(157,25,222,0.9);
-	&__title{
-		color:#92829f;
-		display:flex;
-		align-items:center;
-		padding-left:35px;
-		font-size: 3.3vw;
-		box-sizing:border-box;
-	}
-	&__button{
-		width:25vw;
-		height:25vw;
-		background-color: #bc3184;
-		z-index:0;
-		position:absolute;
-		right:0;
-		box-shadow:inset 0 1px 5px 0 rgb(224,93,207);
-		background-image: url("../assets/arrow.svg");
-		@include properback(18%);
-		cursor:pointer;
-		&:hover{
-			background-color: lighten(#bc3184,10%);
-		}
-	}
+.c-details {
+  width: 100%;
+  height: 25vw;
+  position: relative;
+  display: flex;
+  background-color: #27212b;
+  box-shadow: 0 1px 2px 0 rgba(157, 25, 222, 0.9);
+  &__title {
+    color: #92829f;
+    display: flex;
+    align-items: center;
+    padding-left: 35px;
+    font-size: 3.3vw;
+    box-sizing: border-box;
+  }
+  &__button {
+    width: 25vw;
+    height: 25vw;
+    background-color: #bc3184;
+    z-index: 0;
+    position: absolute;
+    right: 0;
+    box-shadow: inset 0 1px 5px 0 rgb(224, 93, 207);
+    background-image: url("../assets/arrow.svg");
+    @include properback(18%);
+    cursor: pointer;
+    &:hover {
+      background-color: lighten(#bc3184, 10%);
+    }
+  }
 }
 
-.c-examples{
-	width:100%;
-	display:flex;
-	flex-wrap:wrap;
-	margin-bottom:0;
-	@include tablet{
-		flex-wrap:nowrap;
-		}
-	&__example{
-		width:100%;
-		height:90vw;
-		@include tablet{
-			width:35%;
-			height:33vw;
-		}
-		
-	}
+.c-examples {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+  @include tablet {
+    flex-wrap: nowrap;
+  }
+  &__example {
+    width: 100%;
+    height: 90vw;
+    @include tablet {
+      width: 35%;
+      height: 33vw;
+    }
+  }
 
-	&__example--first{
-		background-color: #5b10a1;
-		background-image: url("../assets/arrow.svg");
-		@include properback(13%);
-		cursor:pointer;
-			&:hover{
-			background-color: lighten(#5b10a1,10%);
-			}
-	}
-	&__example--second{
-		background-color: #5b10a1;
-		background-image: url("../assets/img1.jpg");
-		@include properback(cover);
-	}
-	&__example--third{
-		background-color: #5b10a1;
-		background-image: url("../assets/img2.jpg");
-		@include properback(cover);
-	}
+  &__example--first {
+    background-color: #5b10a1;
+    background-image: url("../assets/arrow.svg");
+    @include properback(13%);
+    cursor: pointer;
+    &:hover {
+      background-color: lighten(#5b10a1, 10%);
+    }
+  }
+  &__example--second {
+    background-color: #5b10a1;
+    background-image: url("../assets/img1.jpg");
+    @include properback(cover);
+  }
+  &__example--third {
+    background-color: #5b10a1;
+    background-image: url("../assets/img2.jpg");
+    @include properback(cover);
+  }
 }
 
-.c-article{
-	width:100%;
-	background-color: #ebebeb;
-	margin-top:0;
-	padding:22px;
-	box-sizing:border-box;
-	@include tablet{
-		padding:45px;
-	}
-	&__header{
-		margin:0;
-		color:#0a7f91;
-		@include laptop{
-			font-size: 28px;
-		}
-		@include huge{
-			font-size: 45px;
-		}
-	}
+.c-article {
+  width: 100%;
+  background-color: #ebebeb;
+  margin-top: 0;
+  padding: 22px;
+  box-sizing: border-box;
+  @include tablet {
+    padding: 45px;
+  }
+  &__header {
+    margin: 0;
+    color: #0a7f91;
+    @include laptop {
+      font-size: 28px;
+    }
+    @include huge {
+      font-size: 45px;
+    }
+  }
 
-	&__content{
-		font-size: 14px;
-		@include laptop{
-			font-size: 18px;
-		}
-		@include huge{
-			font-size: 35px;
-		}
-	}
-	&__paragraph{
-		margin-bottom:15px;
-		@include tablet{
-			margin-bottom:45px;
-		}
-	}
-	&__paragraph--mobile-hidden{
-		display:none;
-		@include tablet{
-			display:block;
-		}
-	}
-	.l-column{
-		display:inline-block;
-		margin:0 auto;
-		@include tablet{
-			width:49%;
-			padding-right:45px;
-			box-sizing:border-box;
-		}
-	}
+  &__content {
+    font-size: 14px;
+    @include laptop {
+      font-size: 18px;
+    }
+    @include huge {
+      font-size: 35px;
+    }
+  }
+  &__paragraph {
+    margin-bottom: 15px;
+    @include tablet {
+      margin-bottom: 45px;
+    }
+  }
+  &__paragraph--mobile-hidden {
+    display: none;
+    @include tablet {
+      display: block;
+    }
+  }
+  .l-column {
+    display: inline-block;
+    margin: 0 auto;
+    @include tablet {
+      width: 49%;
+      padding-right: 45px;
+      box-sizing: border-box;
+    }
+  }
 }
-
-// We start extending screen resolutions
-
